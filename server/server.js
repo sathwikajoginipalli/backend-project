@@ -16,7 +16,7 @@ const compression = require('compression');
 app.use(cors());
 app.use(compression());
 
-const url= "mongodb://localhost:27017/personal_budget";
+const url= "mongodb+srv://sathwika:sathwika@cluster0.dxycg.mongodb.net/personal_budget?retryWrites=true&w=majority";
 let user_data= require("./app/routes/user_route");
 let budget_data= require("./app/routes/budget_route");
 let expense_data= require("./app/routes/expense_route");
