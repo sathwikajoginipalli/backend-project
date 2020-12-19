@@ -172,6 +172,11 @@ app.use("/user", user_data);
 app.use("/budget", budget_data);
 app.use("/expense", expense_data);
 
+process.on('uncaughtException', function(err) {
+    console.log('Caught exception: ' + err);
+    throw err;
+});
+
 
 // set port, listen for requests
 const PORT = 3000;
